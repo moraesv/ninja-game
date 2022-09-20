@@ -16,6 +16,8 @@ public class Jogador : MonoBehaviour {
 
 	private AudioSource somPulo;
 	private AudioSource somMoeda;
+	private AudioSource somShuriken;
+	private AudioSource somEspada;
 	
 	public GameObject shuriken;
 
@@ -27,10 +29,12 @@ public class Jogador : MonoBehaviour {
         rig = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator> ();
 		//definir a posição inicial da câmera
-		camera.position =  new Vector3(-1.0f, -1.0f, -10.0f);
+		camera.position =  new Vector3(-3.0f, -1.0f, -10.0f);
 		//instancia o som
-		// somPulo = GetComponents<AudioSource>()[1];
-		// somMoeda = GetComponents<AudioSource>()[2];
+		somPulo = GetComponents<AudioSource>()[1];
+		somMoeda = GetComponents<AudioSource>()[2];
+		somShuriken = GetComponents<AudioSource>()[3];
+		somEspada = GetComponents<AudioSource>()[4];
     }
     
     void Update()
@@ -49,15 +53,15 @@ public class Jogador : MonoBehaviour {
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 			pulando = true;
 			animator.SetBool ("Pulando", true);
-			// somPulo.Play();
+			somPulo.Play();
 		}
         
         if (Input.GetKeyDown(KeyCode.Space) && atacando == false) {
 			atacando = true;
 			animator.SetBool ("Atacando", true);
 
-            Invoke("PararAtaque", 1F);
-			// somPulo.Play();
+            Invoke("PararAtaque", 0.5F);
+			somEspada.Play();
 		}
 
         
@@ -79,11 +83,12 @@ public class Jogador : MonoBehaviour {
 
             GameObject novo = Instantiate(shuriken, new Vector3(fx, fy, fz), Quaternion.identity);
             novo.GetComponent<Shuriken>().mov = movShuriken;
+			somShuriken.Play();
         }
 
 		float camx = rig.transform.position.x + 3;
-		if (camx < -1.0f) {
-			camx = -1.0f;
+		if (camx < -3.0f) {
+			camx = -3.0f;
 		}
 		if (camx > 37.29f) {
 			camx = 37.29f;
@@ -108,10 +113,10 @@ public class Jogador : MonoBehaviour {
 		// 	 SceneManager.LoadScene("jogo2d 2", LoadSceneMode.Single);
 		// }
 
-		// somMoeda.Play ();
-		// Destroy (coll.gameObject);
-		// pontos++;
-		// //exibir os pontos na HUD
-		// txtMoeda.text = ""+pontos;
+		somMoeda.Play();
+		Destroy (coll.gameObject);
+		pontos++;
+		//exibir os pontos na HUD
+		txtMoeda.text = ""+pontos;
 	}
 }

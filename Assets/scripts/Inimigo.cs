@@ -8,9 +8,12 @@ public class Inimigo : MonoBehaviour {
 	public bool atacando = false;
 	private Animator animator;
 
+	private AudioSource somEspada;
+
 	void Start () {
 		rig = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+		somEspada = GetComponents<AudioSource>()[0];
 	}
 	
 	void Update () {
@@ -29,6 +32,7 @@ public class Inimigo : MonoBehaviour {
 			} else {
 				atacando = true;
         		animator.SetBool ("Atacando", true);
+				somEspada.Play();
 				Invoke("PararAtaque", 0.2F);
 				Destroy (col.gameObject); //NPC mata
 			}	
