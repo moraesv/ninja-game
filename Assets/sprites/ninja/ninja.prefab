@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4268601559585038632
+--- !u!1 &2363800953479228236
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,17 +8,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4268601559585038636}
-  - component: {fileID: 4268601559585038635}
-  - component: {fileID: 4268601559585038634}
-  - component: {fileID: 4268601559585038633}
-  - component: {fileID: 4268601559585038637}
-  - component: {fileID: 1965917102}
-  - component: {fileID: 1965917108}
-  - component: {fileID: 8807302740989367419}
-  - component: {fileID: 6079581979486881201}
-  - component: {fileID: 7845971515219022201}
-  - component: {fileID: 9171434422975746213}
+  - component: {fileID: 2363800953479228283}
+  - component: {fileID: 2363800953479228282}
+  - component: {fileID: 2363800953479228277}
+  - component: {fileID: 2363800953479228276}
+  - component: {fileID: 2363800953479228279}
+  - component: {fileID: 2363800953479228278}
+  - component: {fileID: 2363800953479228273}
+  - component: {fileID: 2363800953479228272}
+  - component: {fileID: 2363800953479228275}
+  - component: {fileID: 2363800953479228274}
+  - component: {fileID: 2363800953479228237}
   m_Layer: 0
   m_Name: ninja
   m_TagString: Player
@@ -26,28 +26,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4268601559585038636
+--- !u!4 &2363800953479228283
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.658, y: -3.832, z: 0}
+  m_LocalPosition: {x: -10.658, y: -3.45, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4268601559585038635
+--- !u!212 &2363800953479228282
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -93,14 +93,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4268601559585038634
+--- !u!50 &2363800953479228277
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4268601559585038633
+--- !u!61 &2363800953479228276
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -140,14 +140,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7376089, y: 0.6354537}
   m_EdgeRadius: 0
---- !u!95 &4268601559585038637
+--- !u!95 &2363800953479228279
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 39f5df6815a2ac642ba69633ac495edb, type: 2}
@@ -160,13 +160,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1965917102
+--- !u!114 &2363800953479228278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a6beef32b03a804e95bee4231fbac86, type: 3}
@@ -178,13 +178,13 @@ MonoBehaviour:
   camera: {fileID: 0}
   shuriken: {fileID: 1819142422596918988, guid: a660866ba227fc947b79796ecd951853, type: 3}
   txtMoeda: {fileID: 0}
---- !u!82 &1965917108
+--- !u!82 &2363800953479228273
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -274,13 +274,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &8807302740989367419
+--- !u!82 &2363800953479228272
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -370,13 +370,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &6079581979486881201
+--- !u!82 &2363800953479228275
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -466,13 +466,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &7845971515219022201
+--- !u!82 &2363800953479228274
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -562,13 +562,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &9171434422975746213
+--- !u!82 &2363800953479228237
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268601559585038632}
+  m_GameObject: {fileID: 2363800953479228236}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}

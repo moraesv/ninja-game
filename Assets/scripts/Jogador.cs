@@ -23,6 +23,7 @@ public class Jogador : MonoBehaviour {
 
 	private int pontos = 0;
 	public TextMeshProUGUI  txtMoeda;
+	public TextMeshProUGUI  txtFimJogo;
 
     void Start()
     {
@@ -87,11 +88,11 @@ public class Jogador : MonoBehaviour {
         }
 
 		float camx = rig.transform.position.x + 3;
-		if (camx < -3.0f) {
-			camx = -3.0f;
+		if (camx < -2.50f) {
+			camx = -2.50f;
 		}
-		if (camx > 37.29f) {
-			camx = 37.29f;
+		if (camx > 23.2f) {
+			camx = 23.2f;
 		}
 		camera.position = new Vector3 (camx, -1.0f, -10.0f);
     }
@@ -108,15 +109,19 @@ public class Jogador : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 
-		// if (coll.gameObject.tag == "Finish") {
-		// 	//muda de fase
-		// 	 SceneManager.LoadScene("jogo2d 2", LoadSceneMode.Single);
-		// }
+		if (coll.gameObject.tag == "Finish") {
+			 SceneManager.LoadScene("fase 2", LoadSceneMode.Single);
+		}
 
 		somMoeda.Play();
-		Destroy (coll.gameObject);
+		Destroy(coll.gameObject);
 		pontos++;
 		//exibir os pontos na HUD
 		txtMoeda.text = ""+pontos;
 	}
+
+	void OnDestroy()
+    {
+		txtFimJogo.text = "VOCÊ PERDEU";
+    }
 }
