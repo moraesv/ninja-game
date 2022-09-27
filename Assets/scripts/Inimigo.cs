@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour {
 	private Rigidbody2D rig;
-	private float mov = 1F;
+	public float mov = 1F;
 	public bool atacando = false;
 	private Animator animator;
 

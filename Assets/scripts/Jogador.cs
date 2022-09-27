@@ -30,7 +30,7 @@ public class Jogador : MonoBehaviour {
         rig = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator> ();
 		//definir a posição inicial da câmera
-		camera.position =  new Vector3(-3.0f, -1.0f, -10.0f);
+		camera.position =  new Vector3(-1f, -1.0f, -10.0f);
 		//instancia o som
 		somPulo = GetComponents<AudioSource>()[1];
 		somMoeda = GetComponents<AudioSource>()[2];
@@ -88,11 +88,11 @@ public class Jogador : MonoBehaviour {
         }
 
 		float camx = rig.transform.position.x + 3;
-		if (camx < -2.50f) {
-			camx = -2.50f;
+		if (camx < -1f) {
+			camx = -1f;
 		}
-		if (camx > 23.2f) {
-			camx = 23.2f;
+		if (camx > 21.5f) {
+			camx = 21.5f;
 		}
 		camera.position = new Vector3 (camx, -1.0f, -10.0f);
     }
@@ -109,8 +109,20 @@ public class Jogador : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 
+		if (coll.gameObject.tag == "Fall") {
+ 			Destroy (gameObject);
+		}
+
+		if (coll.gameObject.tag == "Segunda") {
+			 SceneManager.LoadScene("segunda", LoadSceneMode.Single);
+		}
+
+		if (coll.gameObject.tag == "Terceira") {
+			 SceneManager.LoadScene("terceira", LoadSceneMode.Single);
+		}
+
 		if (coll.gameObject.tag == "Finish") {
-			 SceneManager.LoadScene("fase 2", LoadSceneMode.Single);
+			txtFimJogo.text = "VOCÊ GANHOU";
 		}
 
 		somMoeda.Play();
